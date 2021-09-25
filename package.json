@@ -2,7 +2,7 @@
   "name": "ip-tracker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://HSN-Studio.github.io/ip-tracker/",
+  "homepage": "https://hsn-studio.github.io/ip-tracker",
   "dependencies": {
     "@mui/material": "^5.0.0",
     "@testing-library/jest-dom": "^5.14.1",
