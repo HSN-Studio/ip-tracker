@@ -19,12 +19,12 @@ function App() {
   };
   //Methods
   const loadInfo = function (ip) {
-    fetch(`http://ip-api.com/json/${ip}`)
+    fetch(`https://ipapi.co/${ip}/json/`)
       .then((res) => res.json())
       .then((data) => {
         setipInfo(data);
-        console.log(data.lat, data.lon);
-        setpos([data.lat, data.lon]);
+        console.log(data);
+        setpos([data.latitude, data.longitude]);
       });
   };
 
