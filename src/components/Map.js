@@ -13,7 +13,7 @@ function Map({ position }) {
   const flyToPos = () => {
     const { map } = state;
     if (map) {
-      map.setView(position);
+      map.flyTo(position);
     }
   };
 
@@ -21,7 +21,7 @@ function Map({ position }) {
   return (
     <div className="map" id="map">
       <MapContainer
-        center={[31.4504, 73.1350]}
+        center={[31.4504, 73.135]}
         zoom={13}
         whenCreated={(map) => setstate({ map })}
       >
