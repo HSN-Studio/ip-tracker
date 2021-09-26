@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  ZoomControl,
+} from "react-leaflet";
 function Map({ position }) {
   //States
   const [state, setstate] = useState("");
@@ -24,27 +31,21 @@ function Map({ position }) {
         center={[31.4504, 73.135]}
         zoom={13}
         whenCreated={(map) => setstate({ map })}
+        zoomControl={false}
       >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <Marker position={position}>
+          <Popup>
+            IP Located Here. <br /> Accuracy 100%.
+          </Popup>
+        </Marker>
+        <ZoomControl position="bottomright" />
       </MapContainer>
     </div>
   );
 }
 
 export default Map;
-
-//   if (!map) {
-//     map = L.map("map", {
-//       center: [48.864716, 2.349],
-//       zoom: 16,
-//       layers: [
-//         L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
-//           attribution:
-//             '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-//         }),
-//       ],
-//     });
-//   }

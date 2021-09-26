@@ -5,16 +5,25 @@ function Info({ data }) {
   return (
     <div className="info-container">
       <div className="info">
-        <p>IP ADDRESS</p>
-        <h2>{data.ip}</h2>
-        <p>LOCATION</p>
-        <h2>
-          {data.city}, {data.country_code} {data.postal}
-        </h2>
-        <p>TIMEZONE</p>
-        <h2>{data.timezone}</h2>
-        <p>ISP</p>
-        <h2>{data.org}</h2>
+        <span>
+          <p>IP ADDRESS</p>
+          <h3>{data.ip}</h3>
+        </span>
+
+        <span>
+          <p>LOCATION</p>
+          <h3>
+            {data.city}, {data.country_code} {data.postal}
+          </h3>
+        </span>
+        <span>
+          <p>TIMEZONE</p>
+          <h3>{data.timezone}</h3>
+        </span>
+        <span>
+          <p>ISP</p>
+          <h3>{data.org}</h3>
+        </span>
       </div>
     </div>
   );

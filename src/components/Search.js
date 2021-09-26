@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 
 import { FaAngleRight } from "react-icons/fa";
-function Search({ clickHandler, inputHandler }) {
+function Search({ clickHandler, inputHandler, errMsg }) {
   return (
     <div className="search-container">
       <h1 className="title">IP Address Tracker</h1>
@@ -16,6 +16,7 @@ function Search({ clickHandler, inputHandler }) {
           <FaAngleRight color="white" />
         </span>
       </div>
+      <div className="err-msg">{errMsg && <p>{errMsg}</p>}</div>
     </div>
   );
 }
